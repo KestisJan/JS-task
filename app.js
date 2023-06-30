@@ -117,16 +117,29 @@ console.log(`Total D - ` + countD);
 
 function lygineSuma(a, b) {
      if (typeof a === `number` && typeof b === `number`) {
-        return `Sum of numbers - ` + (a+b);
+        let sum = a + b;
+            if(sum % 2 === 0) {
+                return `Suma - ` + sum;
+            } else {
+                return `Nelygine suma`;
+            }
+        
     } if (typeof a === `object` && typeof b === `object`) {
-        return `Masyvo ilgis - ` + (a.length + b.length);
+        let arrSum  = a.length + b.length;
+            if(arrSum % 2 === 0) {
+                return `Masyvo ilgis - ` + arrSum;
+            } else {
+                return `Nelygine suma`;
+            }
     } else {
         return `Bad input type`
     }
 }
 
+// console.log(lygineSuma(3, 2));
 // console.log(lygineSuma(2, 2));
-// console.log(lygineSuma([4,4], [1,2]));
+// console.log(lygineSuma([5,4,5], [1,2]));
+// console.log(lygineSuma([5,5], [1,2]));
 // console.log(lygineSuma([4], 1));
 // console.log(lygineSuma(`t`, `rr`));
 
